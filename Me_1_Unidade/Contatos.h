@@ -15,6 +15,6 @@ public:
 	static void ListarFavoritos(vector<string> nomes, vector<string> telefones1, vector<string> telefones2, vector<bool> favoritos);
 
 private:
-	void ImprimirContato(string nome, string telefone1, string telefone2, bool favorito);
+	static void ImprimirContato(string nome, string telefone1, string telefone2, bool favorito);
 };
 

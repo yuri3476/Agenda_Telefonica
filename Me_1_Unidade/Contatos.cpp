@@ -3,7 +3,10 @@
 void Contatos::AdicionarContato(vector<string> nomes, string nome, vector<string> telefones1, string telefone1,
 	vector<string> telefones2, string telefone2, vector<bool> favoritos, bool favorito)
 {
-	
+	nomes.push_back(nome);
+	telefones1.push_back(telefone1);
+	telefones2.push_back(telefone2);
+	favoritos.push_back(false);
 }
 
 void Contatos::ListarContatos(vector<string> nomes, vector<string> telefones1, vector<string> telefones2, vector<bool> favoritos)
@@ -11,7 +14,7 @@ void Contatos::ListarContatos(vector<string> nomes, vector<string> telefones1, v
 	int tamanho = nomes.size();
 	for (int i = 0; i < tamanho; i++)
 	{
-		ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
+		Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
 	}
 }
 
@@ -22,7 +25,7 @@ void Contatos::ListarContatos(vector<string> nomes, vector<string> telefones1, v
 	{
 		string nome = nomes[i];
 		if (nome[i] == letraContato) {
-			ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
+			Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
 		}
 	}
 }
@@ -34,7 +37,7 @@ void Contatos::ListarFavoritos(vector<string> nomes, vector<string> telefones1, 
 	{
 		if (favoritos[i]) 
 		{
-			ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
+			Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
 		}
 	}
 }

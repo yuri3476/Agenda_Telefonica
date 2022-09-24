@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Contatos.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int main() {
 
 	while (true) {
 		int opcao = -1;
-
+		system("cls||clear");
 		std::cout << "\n";
 		std::cout << "-=-=-=-=AGENDA TELEFÔNICA-=-=-=-=" << "\n";
 		std::cout << "1 - Criar Contato" << "\n"
@@ -29,9 +30,25 @@ int main() {
 		if (opcao == 1) {
 			system("cls||clear");
 
+			string nome;
+			string tel1;
+			string tel2;
+
+			std::cout << "Informe seu nome: " << "\n";
+			cin >> nome;
+			std::cout << "Informe seu telefone 1: " << "\n";
+			cin >> tel1;
+			std::cout << "Informe seu telefone 2: " << "\n";
+			cin >> tel2;
+			nomes.push_back(nome);
+			telefones1.push_back(tel1);
+			telefones2.push_back(tel2);
+			favoritos.push_back(false);
 
 		}
-	
+		if (opcao == 3) {
+			Contatos::ListarContatos(nomes, telefones1, telefones2, favoritos);
+		}
 	}
 
 	system("pause");

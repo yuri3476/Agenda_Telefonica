@@ -46,9 +46,43 @@ int main() {
 			favoritos.push_back(false);
 
 		}
+
 		if (opcao == 3) {
-			Contatos::ListarContatos(nomes, telefones1, telefones2, favoritos);
+			system("cls||clear");
+
+			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+			std::cout << "\n";
+			std::cout << "-=-=-=-=ESCOLHA 1 OPÇÃO-=-=-=-=" << "\n";
+			std::cout << "1 - Listar todos os contatos" << "\n"
+				<< "2 - Listar contato a partir da primeira letra" << "\n";
+			std::cout << "\n";
+			cin >> opcao;
+
+			if (opcao == 1) {
+				system("cls||clear");
+				Contatos::ListarContatos(nomes, telefones1, telefones2, favoritos);
+				std::cout << "\n";
+				std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+				opcao = -1;
+				system("pause");
+
+			}
+			if (opcao == 2) {
+				system("cls||clear");
+				string letra;
+				std::cout << "Digite a letra que deseja buscar: ";
+				cin >> letra;
+
+				Contatos::ListarContatos(nomes, telefones1, telefones2, favoritos);
+				std::cout << "\n";
+				std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+				opcao = -1;
+				system("pause");
+
+			}
+
 		}
+
 	}
 
 	system("pause");

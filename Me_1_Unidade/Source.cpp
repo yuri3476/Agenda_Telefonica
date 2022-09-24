@@ -87,7 +87,10 @@ int main() {
 			string nome;
 			std::cout << "Digite o nome que deseja favoritar: ";
 			cin >> nome;
-			Contatos::FavoritarContato(nomes, nome, favoritos);
+			int pos = Contatos::FavoritarContato(nomes, nome, favoritos);
+			if (pos >= 0) {
+				favoritos[pos] = true;
+			}
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			
 			system("pause");

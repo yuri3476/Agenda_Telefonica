@@ -1,7 +1,10 @@
 ﻿  Contatos.cpp
-C:\Users\Yuri\Desktop\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(14,28): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
-C:\Users\Yuri\Desktop\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(23,28): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
-C:\Users\Yuri\Desktop\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(35,28): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
-C:\Users\Yuri\Desktop\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(47,28): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
-C:\Users\Yuri\Desktop\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(74,28): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
-  Me_1_Unidade.vcxproj -> C:\Users\Yuri\Desktop\Me_1_Unidade\x64\Debug\Me_1_Unidade.exe
+G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(14,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(23,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(35,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(47,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(63,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Source.cpp
+  Generating Code...
+G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(59): warning C4715: 'Contatos::FavoritarContato': not all control paths return a value
+  Me_1_Unidade.vcxproj -> G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\x64\Debug\Me_1_Unidade.exe

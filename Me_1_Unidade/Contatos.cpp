@@ -42,7 +42,7 @@ void Contatos::ListarFavoritos(vector<string> nomes, vector<string> telefones1, 
 	}
 }
 
-void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool> favoritos)
+int Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool> favoritos)
 {
 	int tamanho = nomes.size();
 	for (int i = 0; i < tamanho; i++) {
@@ -51,20 +51,9 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool> 
 			if (favoritos[i]) {
 				std::cout << "O contato já está favoritado!";
 				std::cout << "\n";
-				return;
+				return -1;
 			}
-
-			cout << "Nome: " << nome << endl;
-			string favorito1 = favoritos[i] ? "Sim" : "Não";
-			cout << "Favorito: " << favorito1;
-			std::cout << "\n";
-			favoritos[i] = true;
-			cout << "Nome: " << nome << endl;
-			favorito1 = favoritos[i] ? "Sim" : "Não";
-			cout << "Favorito: " << favorito1;
-			std::cout << "\n";
-			std::cout << "Contato foi favoritado com sucesso!";
-			std::cout << "\n";
+			return i;
 		}
 	}
 }

@@ -15,6 +15,7 @@ void Contatos::ListarContatos(vector<string> nomes, vector<string> telefones1, v
 	for (int i = 0; i < tamanho; i++)
 	{
 		Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
+		cout << "" << endl;
 	}
 }
 
@@ -24,7 +25,7 @@ void Contatos::ListarContatos(vector<string> nomes, vector<string> telefones1, v
 	for (int i = 0; i < tamanho; i++)
 	{
 		string nome = nomes[i];
-		if (toupper(nome[i]) == toupper(letraContato)) {
+		if (toupper(nome[0]) == toupper(letraContato)) {
 			Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
 		}
 	}
@@ -38,11 +39,12 @@ void Contatos::ListarFavoritos(vector<string> nomes, vector<string> telefones1, 
 		if (favoritos[i])
 		{
 			Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favoritos[i]);
+			cout << " " << endl;
 		}
 	}
 }
 
-int Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool> favoritos)
+void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>& favoritos)
 {
 	int tamanho = nomes.size();
 	for (int i = 0; i < tamanho; i++) {
@@ -51,14 +53,18 @@ int Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool> f
 			if (favoritos[i]) {
 				std::cout << "O contato já está favoritado!";
 				std::cout << "\n";
-				return -1;
+				return;
 			}
-			return i;
-		}
+			favoritos[i] = true;
+			std::cout << "Contato foi favoritado com sucesso!";
+			return;
+		}		
 	}
+
+	std::cout << "Contato não encontrado!";
 }
 
-void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<bool> favoritos)
+void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<bool>& favoritos)
 {
 	int tamanho = nomes.size();
 	for (int i = 0; i < tamanho; i++) {
@@ -75,6 +81,7 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		}
 	}
+	std::cout << "Contato não encontrado!";
 }
 
 void Contatos::ImprimirContato(string nome, string telefone1, string telefone2, bool favorito)

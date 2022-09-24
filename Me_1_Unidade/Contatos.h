@@ -13,8 +13,8 @@ public:
 	static void ListarContatos(vector<string> nomes, vector<string> telefones1, vector<string> telefones2, vector<bool> favoritos);
 	static void ListarContatos(vector<string> nomes, vector<string> telefones1, vector<string> telefones2, vector<bool> favoritos, char letraContato);
 	static void ListarFavoritos(vector<string> nomes, vector<string> telefones1, vector<string> telefones2, vector<bool> favoritos);
-	static int FavoritarContato(vector<string> nomes, string nome, vector<bool> favoritos);
-	static void DesfavoritarContato(vector<string> nomes, string nome, vector<bool> favoritos);
+	static void FavoritarContato(vector<string> nomes, string nome, vector<bool>& favoritos);
+	static void DesfavoritarContato(vector<string> nomes, string nome, vector<bool>& favoritos);
 
 private:
 	static void ImprimirContato(string nome, string telefone1, string telefone2, bool favorito);

@@ -69,11 +69,11 @@ int main() {
 			}
 			if (opcao == 2) {
 				system("cls||clear");
-				string letra;
+				char letra;
 				std::cout << "Digite a letra que deseja buscar: ";
 				cin >> letra;
 
-				Contatos::ListarContatos(nomes, telefones1, telefones2, favoritos);
+				Contatos::ListarContatos(nomes, telefones1, telefones2, favoritos, letra);
 				std::cout << "\n";
 				std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 				opcao = -1;
@@ -87,16 +87,10 @@ int main() {
 			string nome;
 			std::cout << "Digite o nome que deseja favoritar: ";
 			cin >> nome;
-			int pos = Contatos::FavoritarContato(nomes, nome, favoritos);
-			if (pos >= 0) {
-				favoritos[pos] = true;
-			}
+			Contatos::FavoritarContato(nomes, nome, favoritos);
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			
 			system("pause");
-
-
-
 		}
 
 		if (opcao == 6) {
@@ -104,7 +98,7 @@ int main() {
 			string nome;
 			std::cout << "Digite o nome que deseja desfavoritar: ";
 			cin >> nome;
-			Contatos::FavoritarContato(nomes, nome, favoritos);
+			Contatos::DesfavoritarContato(nomes, nome, favoritos);
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			system("pause");
 

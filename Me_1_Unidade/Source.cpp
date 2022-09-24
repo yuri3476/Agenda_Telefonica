@@ -17,13 +17,13 @@ int main() {
 		system("cls||clear");
 		std::cout << "\n";
 		std::cout << "-=-=-=-=AGENDA TELEFÔNICA-=-=-=-=" << "\n";
-		std::cout << "1 - Criar Contato" << "\n"
-			<< "2 - Editar Contato " << "\n"
-			<< "3 - Listar Contato " << "\n"
-			<< "4 - Buscar Contato" << "\n"
+		std::cout << "1 - Criar Contato " << "\n"
+			<< "2 - Editar Contatos " << "\n"
+			<< "3 - Listar Contatos " << "\n"
+			<< "4 - Buscar Contatos " << "\n"
 			<< "5 - Favoritar Contato  " << "\n"
 			<< "6 - Desfavoritar Contato " << "\n"
-			<< "0 - Listar Contatos favoritos " << "\n";
+			<< "7 - Listar Contatos favoritos " << "\n";
 		std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 		std::cout << "\n";
 		cin >> opcao;
@@ -82,8 +82,43 @@ int main() {
 			}
 
 		}
+		if (opcao == 5) {
+			system("cls||clear");
+			string nome;
+			std::cout << "Digite o nome que deseja favoritar: ";
+			cin >> nome;
+			Contatos::FavoritarContato(nomes, nome, favoritos);
+			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+			
+			system("pause");
+
+
+
+		}
+
+		if (opcao == 6) {
+			system("cls||clear");
+			string nome;
+			std::cout << "Digite o nome que deseja desfavoritar: ";
+			cin >> nome;
+			Contatos::FavoritarContato(nomes, nome, favoritos);
+			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+			system("pause");
+
+		}
+
+		if (opcao == 7) {
+			system("cls||clear");
+			Contatos::ListarFavoritos(nomes, telefones1, telefones2, favoritos);
+			system("pause");
+			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+			system("pause");
+
+		}
+
 
 	}
+
 
 	system("pause");
 	return 0;

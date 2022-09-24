@@ -47,12 +47,24 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool> 
 	int tamanho = nomes.size();
 	for (int i = 0; i < tamanho; i++) {
 
-		if (nomes[i] == nome) {
+		if (nomes[i]._Equal(nome)) {
 			if (favoritos[i]) {
 				std::cout << "O contato já está favoritado!";
+				std::cout << "\n";
 				return;
 			}
+
+			cout << "Nome: " << nome << endl;
+			string favorito1 = favoritos[i] ? "Sim" : "Não";
+			cout << "Favorito: " << favorito1;
+			std::cout << "\n";
 			favoritos[i] = true;
+			cout << "Nome: " << nome << endl;
+			favorito1 = favoritos[i] ? "Sim" : "Não";
+			cout << "Favorito: " << favorito1;
+			std::cout << "\n";
+			std::cout << "Contato foi favoritado com sucesso!";
+			std::cout << "\n";
 		}
 	}
 }
@@ -65,9 +77,13 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 		if (nomes[i] == nome) {
 			if (!favoritos[i]) {
 				std::cout << "O contato não está favoritado!";
+				std::cout << "\n";
 				return;
 			}
 			favoritos[i] = false;
+			std::cout << "Contato foi desfavoritado com sucesso!";
+			std::cout << "\n";
+
 		}
 	}
 }

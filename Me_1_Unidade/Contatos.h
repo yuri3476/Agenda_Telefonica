@@ -21,5 +21,5 @@ public:
 private:
 	static void AdicionaChar(string nomes, vector<char>& palavra);
 	static void ImprimirContato(string nome, string telefone1, string telefone2, bool favorito);
-};
 
+};

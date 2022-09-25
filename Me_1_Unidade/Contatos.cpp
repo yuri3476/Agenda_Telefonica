@@ -51,7 +51,7 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>&
 
 		if (nomes[i]._Equal(nome)) {
 			if (favoritos[i]) {
-				std::cout << "O contato j� est� favoritado!";
+				std::cout << "O contato já está favoritado!";
 				std::cout << "\n";
 				return;
 			}
@@ -61,7 +61,7 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>&
 		}
 	}
 
-	std::cout << "Contato n�o encontrado!";
+	std::cout << "Contato não encontrado!";
 }
 
 void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<bool>& favoritos)
@@ -71,7 +71,7 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		if (nomes[i] == nome) {
 			if (!favoritos[i]) {
-				std::cout << "O contato n�o est� favoritado!";
+				std::cout << "O contato não está favoritado!";
 				std::cout << "\n";
 				return;
 			}
@@ -81,7 +81,7 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		}
 	}
-	std::cout << "Contato n�o encontrado!";
+	std::cout << "Contato não encontrado!";
 }
 
 void Contatos::EditarContato(vector<string> nomes, string nome, vector<string>& telefones1, string telefone1, vector<string>& telefones2, string telefone2, int opcao)
@@ -105,7 +105,7 @@ void Contatos::EditarContato(vector<string> nomes, string nome, vector<string>& 
 			}
 		}
 	}
-	std::cout << "Contato n�o encontrado!";
+	std::cout << "Contato não encontrado!";
 	std::cout << "\n";
 }
 
@@ -150,7 +150,7 @@ void Contatos::ImprimirContato(string nome, string telefone1, string telefone2, 
 	cout << "Nome: " << nome << endl;
 	cout << "Telefone 1: " << telefone1 << endl;
 	cout << "Telefone 2: " << telefone2 << endl;
-	string favorito1 = favorito ? "Sim" : "N�o";
+	string favorito1 = favorito ? "Sim" : "Não";
 	cout << "Favorito: " << favorito1;
 	std::cout << "\n";
 }

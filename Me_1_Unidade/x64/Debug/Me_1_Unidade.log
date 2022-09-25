@@ -1,10 +1,2 @@
-﻿  Contatos.cpp
-G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(14,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(24,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(36,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(49,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(69,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(89,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Source.cpp
-  Generating Code...
+﻿  Source.cpp
   Me_1_Unidade.vcxproj -> G:\My Drive\6 periodo materias\Programacao avancada\1 und\ME_1\Me_1_Unidade\x64\Debug\Me_1_Unidade.exe

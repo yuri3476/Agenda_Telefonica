@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
-	vector<string> nomes{"leleo", "yuri", "yuriririri" };
+	vector<string> nomes{"leleo claudio", "yuri", "yuriririri" };
 	vector<string> telefones1{"44", "11", "55"};
 	vector<string> telefones2{ "44", "11", "55" };
 	vector<bool> favoritos{true,false,true,false};
@@ -16,7 +16,7 @@ int main() {
 		int opcao = -1;
 		std::system("cls||clear");
 		std::cout << "\n";
-		std::cout << "-=-=-=-=AGENDA TELEFÔNICA-=-=-=-=" << "\n";
+		std::cout << "-=-=-=-=AGENDA TELEFONICA-=-=-=-=" << "\n";
 		std::cout << "1 - Criar Contato " << "\n"
 			<< "2 - Editar Contatos " << "\n"
 			<< "3 - Listar Contatos " << "\n"
@@ -24,7 +24,7 @@ int main() {
 			<< "5 - Favoritar Contato  " << "\n"
 			<< "6 - Desfavoritar Contato " << "\n"
 			<< "7 - Listar Contatos favoritos " << "\n"
-			<< "0 - Fechar Agenda Telefônica" << "\n";
+			<< "0 - Fechar Agenda Telefonica" << "\n";
 		std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 		std::cout << "\n";
 		cin >> opcao;
@@ -45,7 +45,7 @@ int main() {
 			string tel2;
 
 			std::cout << "Informe seu nome: " << "\n";
-			cin >> nome;
+			std::getline(std::cin, nome);
 			std::cout << "Informe seu telefone 1: " << "\n";
 			cin >> tel1;
 			std::cout << "Informe seu telefone 2: " << "\n";
@@ -60,7 +60,7 @@ int main() {
 			std::system("cls||clear");
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			std::cout << "\n";
-			std::cout << "-=-=-=-=ESCOLHA 1 OP��O-=-=-=-=" << "\n";
+			std::cout << "-=-=-=-=ESCOLHA 1 OPCAO-=-=-=-=" << "\n";
 			std::cout << "1 - Editar telefone 1" << "\n"
 				<< "2 - Editar telefone 2" << "\n";
 			std::cout << "\n";
@@ -71,8 +71,8 @@ int main() {
 				string nome;
 				string telefone1;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
-				cin >> nome;
-				std::cout << "Informe o novo n�mero: " << "\n";
+				std::getline(std::cin, nome);
+				std::cout << "Informe o novo número: " << "\n";
 				cin >> telefone1;
 				Contatos::EditarContato(nomes, nome, telefones1, telefone1, telefones2, "0", opcao);
 			}
@@ -82,8 +82,8 @@ int main() {
 				string nome;
 				string telefone2;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
-				cin >> nome;
-				std::cout << "Informe o novo n�mero: " << "\n";
+				std::getline(std::cin, nome);
+				std::cout << "Informe o novo número: " << "\n";
 				cin >> telefone2;
 				Contatos::EditarContato(nomes, nome, telefones1, "0", telefones2, telefone2, opcao);
 			}
@@ -94,7 +94,7 @@ int main() {
 
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			std::cout << "\n";
-			std::cout << "-=-=-=-=ESCOLHA 1 OP��O-=-=-=-=" << "\n";
+			std::cout << "-=-=-=-=ESCOLHA 1 OPCAO-=-=-=-=" << "\n";
 			std::cout << "1 - Listar todos os contatos" << "\n"
 				<< "2 - Listar contato a partir da primeira letra" << "\n";
 			std::cout << "\n";
@@ -127,7 +127,7 @@ int main() {
 			std::system("cls||clear");
 			string nome;
 			std::cout << "Digite o nome ou parte dele que deseja buscar: ";
-			cin >> nome;
+			std::getline(std::cin, nome);
 			Contatos::BuscarContato(nomes, nome, telefones1, telefones2, favoritos);
 			system("pause");
 		}
@@ -136,7 +136,7 @@ int main() {
 			std::system("cls||clear");
 			string nome;
 			std::cout << "Digite o nome que deseja favoritar: ";
-			cin >> nome;
+			std::getline(std::cin, nome);
 			Contatos::FavoritarContato(nomes, nome, favoritos);
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			
@@ -147,7 +147,7 @@ int main() {
 			system("cls||clear");
 			string nome;
 			std::cout << "Digite o nome que deseja desfavoritar: ";
-			cin >> nome;
+			std::getline(std::cin, nome);
 			Contatos::DesfavoritarContato(nomes, nome, favoritos);
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			system("pause");

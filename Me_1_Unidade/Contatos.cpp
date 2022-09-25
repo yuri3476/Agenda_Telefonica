@@ -113,7 +113,7 @@ void Contatos::BuscarContato(vector<string> nomes, string nomeBusca, vector<stri
 {
 	vector<char> palavraBusca;
 	vector<char> palavra;
-	int contadorEncontrados;
+	int contadorEncontrados = 0;
 	for (int i = 0; i < nomeBusca.size(); i++)
 		palavraBusca.push_back(toupper(nomeBusca[i]));
 	

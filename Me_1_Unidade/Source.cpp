@@ -7,16 +7,16 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
-	vector<string> nomes;
-	vector<string> telefones1;
-	vector<string> telefones2;
-	vector<bool> favoritos;
+	vector<string> nomes{"leleo", "yuri", "yuriririri" };
+	vector<string> telefones1{"44", "11", "55"};
+	vector<string> telefones2{ "44", "11", "55" };
+	vector<bool> favoritos{false,false,false,false};
 
 	while (true) {
 		int opcao = -1;
 		system("cls||clear");
 		std::cout << "\n";
-		std::cout << "-=-=-=-=AGENDA TELEFÔNICA-=-=-=-=" << "\n";
+		std::cout << "-=-=-=-=AGENDA TELEFï¿½NICA-=-=-=-=" << "\n";
 		std::cout << "1 - Criar Contato " << "\n"
 			<< "2 - Editar Contatos " << "\n"
 			<< "3 - Listar Contatos " << "\n"
@@ -24,7 +24,7 @@ int main() {
 			<< "5 - Favoritar Contato  " << "\n"
 			<< "6 - Desfavoritar Contato " << "\n"
 			<< "7 - Listar Contatos favoritos " << "\n"
-			<< "0 - Fechar Agenda Telefônica" << "\n";
+			<< "0 - Fechar Agenda Telefï¿½nica" << "\n";
 		std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 		std::cout << "\n";
 		cin >> opcao;
@@ -60,7 +60,7 @@ int main() {
 			system("cls||clear");
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			std::cout << "\n";
-			std::cout << "-=-=-=-=ESCOLHA 1 OPÇÃO-=-=-=-=" << "\n";
+			std::cout << "-=-=-=-=ESCOLHA 1 OPï¿½ï¿½O-=-=-=-=" << "\n";
 			std::cout << "1 - Editar telefone 1" << "\n"
 				<< "2 - Editar telefone 2" << "\n";
 			std::cout << "\n";
@@ -72,7 +72,7 @@ int main() {
 				string telefone1;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
 				cin >> nome;
-				std::cout << "Informe o novo número: " << "\n";
+				std::cout << "Informe o novo nï¿½mero: " << "\n";
 				cin >> telefone1;
 				Contatos::EditarContato(nomes, nome, telefones1, telefone1, telefones2, "0", opcao);
 			}
@@ -83,7 +83,7 @@ int main() {
 				string telefone2;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
 				cin >> nome;
-				std::cout << "Informe o novo número: " << "\n";
+				std::cout << "Informe o novo nï¿½mero: " << "\n";
 				cin >> telefone2;
 				Contatos::EditarContato(nomes, nome, telefones1, "0", telefones2, telefone2, opcao);
 			}
@@ -94,7 +94,7 @@ int main() {
 
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			std::cout << "\n";
-			std::cout << "-=-=-=-=ESCOLHA 1 OPÇÃO-=-=-=-=" << "\n";
+			std::cout << "-=-=-=-=ESCOLHA 1 OPï¿½ï¿½O-=-=-=-=" << "\n";
 			std::cout << "1 - Listar todos os contatos" << "\n"
 				<< "2 - Listar contato a partir da primeira letra" << "\n";
 			std::cout << "\n";
@@ -121,6 +121,17 @@ int main() {
 				opcao = -1;
 				system("pause");
 			}
+		}
+
+		}
+
+		if (opcao == 4) {
+			system("cls||clear");
+			string nome;
+			std::cout << "Digite o nome ou parte dele que deseja buscar: ";
+			cin >> nome;
+			Contatos::BuscarContato(nomes, nome, telefones1, telefones2, favoritos);
+			system("pause");
 		}
 
 		if (opcao == 5) {

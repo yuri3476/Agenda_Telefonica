@@ -51,7 +51,7 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>&
 
 		if (nomes[i]._Equal(nome)) {
 			if (favoritos[i]) {
-				std::cout << "O contato já está favoritado!";
+				std::cout << "O contato jï¿½ estï¿½ favoritado!";
 				std::cout << "\n";
 				return;
 			}
@@ -61,7 +61,7 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>&
 		}
 	}
 
-	std::cout << "Contato não encontrado!";
+	std::cout << "Contato nï¿½o encontrado!";
 }
 
 void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<bool>& favoritos)
@@ -71,7 +71,7 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		if (nomes[i] == nome) {
 			if (!favoritos[i]) {
-				std::cout << "O contato não está favoritado!";
+				std::cout << "O contato nï¿½o estï¿½ favoritado!";
 				std::cout << "\n";
 				return;
 			}
@@ -81,7 +81,7 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		}
 	}
-	std::cout << "Contato não encontrado!";
+	std::cout << "Contato nï¿½o encontrado!";
 }
 
 void Contatos::EditarContato(vector<string> nomes, string nome, vector<string>& telefones1, string telefone1, vector<string>& telefones2, string telefone2, int opcao)
@@ -105,16 +105,52 @@ void Contatos::EditarContato(vector<string> nomes, string nome, vector<string>& 
 			}
 		}
 	}
-	std::cout << "Contato não encontrado!";
+	std::cout << "Contato nï¿½o encontrado!";
 	std::cout << "\n";
 }
 
+void Contatos::BuscarContato(vector<string> nomes, string nomeBusca, vector<string> telefones1, vector<string> telefones2, vector<bool> favorito)
+{
+	vector<char> palavraBusca;
+	vector<char> palavra;
+
+	for (int i = 0; i < nomeBusca.size(); i++)
+		palavraBusca.push_back(toupper(nomeBusca[i]));
+	
+	for (int i = 0; i < nomes.size(); i++)
+	{
+		Contatos::AdicionaChar(nomes[i], palavra);
+		int contador = 0;
+		if (!(palavraBusca.size() > palavra.size())) {
+			for (int j = 0; j < palavraBusca.size(); j++)
+			{
+				if (palavraBusca[j] == palavra[j]) {
+					contador += 1;
+				}
+
+				if (contador == palavraBusca.size()) {
+					Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favorito[i]);
+					cout << " " << endl;
+				}
+			}
+			palavra.clear();
+		}
+	}
+}
+
+void Contatos::AdicionaChar(string nomes, vector<char>& palavra)
+{
+	for (int i = 0; i < nomes.size(); i++)
+	{
+		palavra.push_back(toupper(nomes[i]));
+	}
+}
 void Contatos::ImprimirContato(string nome, string telefone1, string telefone2, bool favorito)
 {
 	cout << "Nome: " << nome << endl;
 	cout << "Telefone 1: " << telefone1 << endl;
 	cout << "Telefone 2: " << telefone2 << endl;
-	string favorito1 = favorito ? "Sim" : "Não";
+	string favorito1 = favorito ? "Sim" : "Nï¿½o";
 	cout << "Favorito: " << favorito1;
 	std::cout << "\n";
 }

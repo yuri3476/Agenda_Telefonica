@@ -113,7 +113,7 @@ void Contatos::BuscarContato(vector<string> nomes, string nomeBusca, vector<stri
 {
 	vector<char> palavraBusca;
 	vector<char> palavra;
-
+	int contadorEncontrados;
 	for (int i = 0; i < nomeBusca.size(); i++)
 		palavraBusca.push_back(toupper(nomeBusca[i]));
 	
@@ -130,13 +130,16 @@ void Contatos::BuscarContato(vector<string> nomes, string nomeBusca, vector<stri
 
 				if (contador == palavraBusca.size()) {
 					Contatos::ImprimirContato(nomes[i], telefones1[i], telefones2[i], favorito[i]);
+					contadorEncontrados++;
 					cout << " " << endl;
 				}
 			}
 			palavra.clear();
 		}
 	}
-	std::cout << "Contato nao encontrado " << std::endl;
+
+	if(contadorEncontrados == 0)
+		std::cout << "Contato nao encontrado " << std::endl;
 }
 
 void Contatos::AdicionaChar(string nomes, vector<char>& palavra)

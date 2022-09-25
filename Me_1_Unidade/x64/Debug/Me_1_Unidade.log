@@ -1,8 +1,2 @@
-﻿  Contatos.cpp
-D:\Aréa de Trabalho\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(14,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\Aréa de Trabalho\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(24,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\Aréa de Trabalho\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(36,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\Aréa de Trabalho\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(49,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\Aréa de Trabalho\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(69,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-D:\Aréa de Trabalho\Me_1_Unidade\Me_1_Unidade\Contatos.cpp(89,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  Source.cpp
   Me_1_Unidade.vcxproj -> D:\Aréa de Trabalho\Me_1_Unidade\x64\Debug\Me_1_Unidade.exe

@@ -7,10 +7,10 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
-	vector<string> nomes{"leleo claudio", "yuri", "yuriririri" };
-	vector<string> telefones1{"44", "11", "55"};
-	vector<string> telefones2{ "44", "11", "55" };
-	vector<bool> favoritos{true,false,true,false};
+	vector<string> nomes{"leleo claudio", "yuri", "yuriririri", "Teclados e seus raqueis"};
+	vector<string> telefones1{"44", "11", "55", "67"};
+	vector<string> telefones2{ "44", "11", "55", "77"};
+	vector<bool> favoritos{true, false, true, false};
 
 	while (true) {
 		int opcao = -1;
@@ -45,7 +45,7 @@ int main() {
 			string tel2;
 
 			std::cout << "Informe seu nome: " << "\n";
-			std::getline(std::cin, nome);
+			cin >> nome;
 			std::cout << "Informe seu telefone 1: " << "\n";
 			cin >> tel1;
 			std::cout << "Informe seu telefone 2: " << "\n";
@@ -71,7 +71,7 @@ int main() {
 				string nome;
 				string telefone1;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
-				std::getline(std::cin, nome);
+				cin >> nome;
 				std::cout << "Informe o novo número: " << "\n";
 				cin >> telefone1;
 				Contatos::EditarContato(nomes, nome, telefones1, telefone1, telefones2, "0", opcao);
@@ -82,7 +82,7 @@ int main() {
 				string nome;
 				string telefone2;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
-				std::getline(std::cin, nome);
+				cin >> nome;
 				std::cout << "Informe o novo número: " << "\n";
 				cin >> telefone2;
 				Contatos::EditarContato(nomes, nome, telefones1, "0", telefones2, telefone2, opcao);
@@ -127,7 +127,7 @@ int main() {
 			std::system("cls||clear");
 			string nome;
 			std::cout << "Digite o nome ou parte dele que deseja buscar: ";
-			std::getline(std::cin, nome);
+			cin >> nome;
 			Contatos::BuscarContato(nomes, nome, telefones1, telefones2, favoritos);
 			system("pause");
 		}
@@ -136,7 +136,7 @@ int main() {
 			std::system("cls||clear");
 			string nome;
 			std::cout << "Digite o nome que deseja favoritar: ";
-			std::getline(std::cin, nome);
+			cin >> nome;
 			Contatos::FavoritarContato(nomes, nome, favoritos);
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			
@@ -147,7 +147,7 @@ int main() {
 			system("cls||clear");
 			string nome;
 			std::cout << "Digite o nome que deseja desfavoritar: ";
-			std::getline(std::cin, nome);
+			cin >> nome;
 			Contatos::DesfavoritarContato(nomes, nome, favoritos);
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			system("pause");

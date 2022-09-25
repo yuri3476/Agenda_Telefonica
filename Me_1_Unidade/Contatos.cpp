@@ -51,7 +51,7 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>&
 
 		if (nomes[i]._Equal(nome)) {
 			if (favoritos[i]) {
-				std::cout << "O contato ja está favoritado!";
+				std::cout << "O contato ja esta favoritado!";
 				std::cout << "\n";
 				return;
 			}
@@ -71,7 +71,7 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		if (nomes[i] == nome) {
 			if (!favoritos[i]) {
-				std::cout << "O contato nao está favoritado!";
+				std::cout << "O contato nao esta favoritado!";
 				std::cout << "\n";
 				return;
 			}
@@ -136,6 +136,7 @@ void Contatos::BuscarContato(vector<string> nomes, string nomeBusca, vector<stri
 			palavra.clear();
 		}
 	}
+	std::cout << "Contato nao encontrado " << std::endl;
 }
 
 void Contatos::AdicionaChar(string nomes, vector<char>& palavra)

@@ -23,10 +23,20 @@ int main() {
 			<< "4 - Buscar Contatos " << "\n"
 			<< "5 - Favoritar Contato  " << "\n"
 			<< "6 - Desfavoritar Contato " << "\n"
-			<< "7 - Listar Contatos favoritos " << "\n";
+			<< "7 - Listar Contatos favoritos " << "\n"
+			<< "0 - Fechar Agenda Telefônica" << "\n";
 		std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 		std::cout << "\n";
 		cin >> opcao;
+
+		if (opcao == 0) {
+			std::cout << "\n";
+			std::cout << "Agenda Fechada!" << "\n";
+			std::cout << "-=-=-=-=-=-=-=-=-=" << "\n";
+			std::cout << "\n";
+			break;
+		}
+
 		if (opcao == 1) {
 			system("cls||clear");
 
@@ -44,7 +54,39 @@ int main() {
 			telefones1.push_back(tel1);
 			telefones2.push_back(tel2);
 			favoritos.push_back(false);
+		}
 
+		if (opcao == 2) {
+			system("cls||clear");
+			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
+			std::cout << "\n";
+			std::cout << "-=-=-=-=ESCOLHA 1 OPÇÃO-=-=-=-=" << "\n";
+			std::cout << "1 - Editar telefone 1" << "\n"
+				<< "2 - Editar telefone 2" << "\n";
+			std::cout << "\n";
+			cin >> opcao;
+
+			if (opcao == 1) {
+				system("cls||clear");
+				string nome;
+				string telefone1;
+				std::cout << "Informe o nome que deseja alterar: " << "\n";
+				cin >> nome;
+				std::cout << "Informe o novo número: " << "\n";
+				cin >> telefone1;
+				Contatos::EditarContato(nomes, nome, telefones1, telefone1, telefones2, "0", opcao);
+			}
+
+			if (opcao == 2) {
+				system("cls||clear");
+				string nome;
+				string telefone2;
+				std::cout << "Informe o nome que deseja alterar: " << "\n";
+				cin >> nome;
+				std::cout << "Informe o novo número: " << "\n";
+				cin >> telefone2;
+				Contatos::EditarContato(nomes, nome, telefones1, "0", telefones2, telefone2, opcao);
+			}
 		}
 
 		if (opcao == 3) {
@@ -65,8 +107,8 @@ int main() {
 				std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 				opcao = -1;
 				system("pause");
-
 			}
+
 			if (opcao == 2) {
 				system("cls||clear");
 				char letra;
@@ -78,10 +120,9 @@ int main() {
 				std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 				opcao = -1;
 				system("pause");
-
 			}
-
 		}
+
 		if (opcao == 5) {
 			system("cls||clear");
 			string nome;
@@ -107,15 +148,11 @@ int main() {
 		if (opcao == 7) {
 			system("cls||clear");
 			Contatos::ListarFavoritos(nomes, telefones1, telefones2, favoritos);
-			system("pause");
 			std::cout << "-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-" << "\n";
 			system("pause");
 
 		}
-
-
 	}
-
 
 	system("pause");
 	return 0;

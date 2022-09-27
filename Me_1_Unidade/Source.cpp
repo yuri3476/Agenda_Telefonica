@@ -7,10 +7,10 @@ using namespace std;
 
 int main() {
 	setlocale(LC_ALL, "Portuguese");
-	vector<string> nomes{"leleo claudio", "yuri", "yuriririri", "Teclados e seus raqueis"};
-	vector<string> telefones1{"44", "11", "55", "67"};
-	vector<string> telefones2{ "44", "11", "55", "77"};
-	vector<bool> favoritos{true, false, true, false};
+	vector<string> nomes{"yuri", "leleo", "Yuri Rezende", "Raquel", "rodney", "Rodney Guimarães"};
+	vector<string> telefones1{"11111", "22222", "33333", "44444", "55555", "66666"};
+	vector<string> telefones2{ "11111", "22222", "33333", "44444", "55555", "66666"};
+	vector<bool> favoritos{true, false, true, false, true, false};
 
 	while (true) {
 		int opcao = -1;
@@ -72,7 +72,7 @@ int main() {
 				string telefone1;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
 				cin >> nome;
-				std::cout << "Informe o novo número: " << "\n";
+				std::cout << "Informe o novo numero: " << "\n";
 				cin >> telefone1;
 				Contatos::EditarContato(nomes, nome, telefones1, telefone1, telefones2, "0", opcao);
 			}
@@ -83,7 +83,7 @@ int main() {
 				string telefone2;
 				std::cout << "Informe o nome que deseja alterar: " << "\n";
 				cin >> nome;
-				std::cout << "Informe o novo número: " << "\n";
+				std::cout << "Informe o novo numero: " << "\n";
 				cin >> telefone2;
 				Contatos::EditarContato(nomes, nome, telefones1, "0", telefones2, telefone2, opcao);
 			}

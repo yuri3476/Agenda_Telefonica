@@ -51,12 +51,15 @@ void Contatos::FavoritarContato(vector<string> nomes, string nome, vector<bool>&
 
 		if (nomes[i]._Equal(nome)) {
 			if (favoritos[i]) {
+				std::cout << "\n";
 				std::cout << "O contato ja esta favoritado!";
 				std::cout << "\n";
 				return;
 			}
 			favoritos[i] = true;
+			std::cout << "\n";
 			std::cout << "Contato foi favoritado com sucesso!";
+			std::cout << "\n";
 			return;
 		}
 	}
@@ -71,13 +74,16 @@ void Contatos::DesfavoritarContato(vector<string> nomes, string nome, vector<boo
 
 		if (nomes[i] == nome) {
 			if (!favoritos[i]) {
+				std::cout << "\n";
 				std::cout << "O contato nao esta favoritado!";
 				std::cout << "\n";
 				return;
 			}
 			favoritos[i] = false;
+			std::cout << "\n";
 			std::cout << "Contato foi desfavoritado com sucesso!";
 			std::cout << "\n";
+			return;
 
 		}
 	}
